@@ -1,0 +1,167 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 1rem;
+}
+
+
+header {
+    background: linear-gradient(90deg, #3a7bd5, #3a6073);
+    color: white;
+    padding: 1.2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ffd700;
+    color: #333;
+}
+
+
+main {
+    padding: 1.5rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    border-left: 5px solid #3a7bd5;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+
+#projects article,
+#blog article {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+}
+
+
+
+
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem;
+    }
+
+    main {
+        padding: 0.8rem;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    article {
+        padding: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}

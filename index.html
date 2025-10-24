@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио веб-разработчика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Портфолио веб-разработчика</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#blog">Блог</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ОБО МНЕ -->
+        <section id="about">
+            <div class="container">
+                <h2>Обо мне</h2>
+                <div class="about-content">
+                    <picture>
+                        <!-- Адаптивное изображение -->
+                        <source srcset="img/profile-large.jpg" media="(min-width: 900px)">
+                        <source srcset="img/profile-medium.jpg" media="(min-width: 600px)">
+                        <img src="img/profile-small.jpg" alt="Фото разработчика" class="profile-photo">
+                    </picture>
+                    <p>
+                        Здравствуйте! Меня зовут <strong>Ахмеднаби</strong>, я начинающий веб-разработчик.
+                        Создаю адаптивные сайты и веб-приложения, уделяя внимание дизайну, скорости загрузки и удобству пользователей.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПРОЕКТЫ -->
+        <section id="projects">
+            <div class="container">
+                <h2>Мои проекты</h2>
+                <div class="grid-projects">
+                    <article>
+                        <h3>Интернет-магазин электроники</h3>
+                        <img src="img/shop.jpg" alt="Скриншот интернет-магазина">
+                        <p>Разработал интернет-магазин с корзиной, поиском товаров и адаптивным интерфейсом.</p>
+                    </article>
+
+                    <article>
+                        <h3>Личный блог</h3>
+                        <img src="img/blog.jpg" alt="Скриншот блога">
+                        <p>Сайт-блог с публикацией статей, системой комментариев и современным дизайном.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- БЛОГ -->
+        <section id="blog">
+            <div class="container">
+                <h2>Последние статьи</h2>
+                <article>
+                    <header>
+                        <h3>Как я учу JavaScript</h3>
+                        <time datetime="2025-09-10">10 сентября 2025</time>
+                    </header>
+                    <p>Рассказываю, как планирую изучение JavaScript и какие ресурсы использую.</p>
+                </article>
+
+                <article>
+                    <header>
+                        <h3>Что нового в HTML5</h3>
+                        <time datetime="2025-09-01">1 сентября 2025</time>
+                    </header>
+                    <p>HTML5 добавил множество полезных семантических тегов, которые упрощают разработку сайтов.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- КОНТАКТЫ -->
+    <footer id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <address>
+                Email: <a href="mailto:ivan.dev@example.com">ivan.dev@example.com</a><br>
+                Телефон: <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+            </address>
+            <p>&copy; 2025 Иван Разработчик</p>
+        </div>
+    </footer>
+</body>
+</html>
