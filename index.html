@@ -1,99 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио веб-разработчика</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Зоопарк — Главная</title>
+<style>
+/* === СТИЛИ В ОДНОМ ФАЙЛЕ === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f4f4f4; color: #222; }
+
+/* HEADER */
+.header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #2e4600; color: white; }
+.logo { font-size: 34px; font-weight: bold; cursor: pointer; transition: .3s; }
+.logo:hover { transform: scale(1.1); }
+
+.navbar ul { display: flex; gap: 30px; list-style: none; }
+.navbar a { color: white; text-decoration: none; font-size: 18px; }
+.navbar a:hover { color: #c9ff7b; }
+
+/* HERO */
+.hero { height: 65vh; background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1600&q=80'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; }
+.hero-title { font-size: 48px; }
+.hero-btn { margin-top: 20px; background: #88cc00; padding: 12px 30px; border-radius: 10px; color: #fff; font-size: 20px; text-decoration: none; transition: .3s; }
+.hero-btn:hover { background: #6aa800; transform: scale(1.1); }
+
+/* ANIMALS */
+.animals { padding: 60px; text-align: center; }
+.animal-cards { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.animal-card { width: 300px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.15); transition: .3s; }
+.animal-card:hover { transform: translateY(-8px); }
+.animal-card img { width: 100%; border-radius: 10px; }
+
+/* SLIDER */
+.slider { width: 80%; margin: 50px auto; overflow: hidden; border-radius: 16px; }
+.slides { width: 300%; display: flex; animation: slide 9s infinite; }
+.slides img { width: 100%; }
+@keyframes slide { 0%,10%{transform:translateX(0)} 35%,45%{transform:translateX(-100%)} 65%,75%{transform:translateX(-200%)} 100%{transform:translateX(0)} }
+
+/* TICKETS */
+.tickets { background: #f1f9e6; padding: 60px; text-align: center; }
+.ticket-btn { margin-top: 20px; padding: 12px 30px; background: #88cc00; border-radius: 10px; font-size: 20px; color: white; text-decoration: none; transition: .3s; }
+.ticket-btn:hover { background: #6aa800; transform: scale(1.1); }
+
+/* FOOTER */
+.footer { background: #2e4600; color: white; text-align: center; padding: 25px; margin-top: 40px; }
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Портфолио веб-разработчика</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#blog">Блог</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <!-- ОБО МНЕ -->
-        <section id="about">
-            <div class="container">
-                <h2>Обо мне</h2>
-                <div class="about-content">
-                    <picture>
-                        <!-- Адаптивное изображение -->
-                        <source srcset="img/profile-large.jpg" media="(min-width: 900px)">
-                        <source srcset="img/profile-medium.jpg" media="(min-width: 600px)">
-                        <img src="img/profile-small.jpg" alt="Фото разработчика" class="profile-photo">
-                    </picture>
-                    <p>
-                        Здравствуйте! Меня зовут <strong>Ахмеднаби</strong>, я начинающий веб-разработчик.
-                        Создаю адаптивные сайты и веб-приложения, уделяя внимание дизайну, скорости загрузки и удобству пользователей.
-                    </p>
-                </div>
-            </div>
-        </section>
+<header class="header">
+  <div class="logo">ZooLife</div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#animals">Животные</a></li>
+      <li><a href="#slider">Галерея</a></li>
+      <li><a href="#tickets">Билеты</a></li>
+    </ul>
+  </nav>
+</header>
 
-        <!-- ПРОЕКТЫ -->
-        <section id="projects">
-            <div class="container">
-                <h2>Мои проекты</h2>
-                <div class="grid-projects">
-                    <article>
-                        <h3>Интернет-магазин электроники</h3>
-                        <img src="img/shop.jpg" alt="Скриншот интернет-магазина">
-                        <p>Разработал интернет-магазин с корзиной, поиском товаров и адаптивным интерфейсом.</p>
-                    </article>
+<section class="hero">
+  <h1 class="hero-title">Добро пожаловать в ZooLife!</h1>
+  <p>Исследуй удивительный мир животных</p>
+  <a href="#tickets" class="hero-btn">Купить билет</a>
+</section>
 
-                    <article>
-                        <h3>Личный блог</h3>
-                        <img src="img/blog.jpg" alt="Скриншот блога">
-                        <p>Сайт-блог с публикацией статей, системой комментариев и современным дизайном.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+<section class="animals" id="animals">
+  <h2>Наши животные</h2>
+  <div class="animal-cards">
+    <div class="animal-card"><img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80"><h3>Лев</h3><p>Король саванны.</p></div>
+    <div class="animal-card"><img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=800&q=80"><h3>Жираф</h3><p>Добрый великан.</p></div>
+    <div class="animal-card"><img src="https://images.unsplash.com/photo-1568822617275-7d717c4b0f7c?auto=format&fit=crop&w=800&q=80"><h3>Панда</h3><p>Пушистый мишка.</p></div>
+  </div>
+</section>
 
-        <!-- БЛОГ -->
-        <section id="blog">
-            <div class="container">
-                <h2>Последние статьи</h2>
-                <article>
-                    <header>
-                        <h3>Как я учу JavaScript</h3>
-                        <time datetime="2025-09-10">10 сентября 2025</time>
-                    </header>
-                    <p>Рассказываю, как планирую изучение JavaScript и какие ресурсы использую.</p>
-                </article>
+<section class="slider" id="slider">
+  <div class="slides">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80">
+    <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=1600&q=80">
+    <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1600&q=80">
+  </div>
+</section>
 
-                <article>
-                    <header>
-                        <h3>Что нового в HTML5</h3>
-                        <time datetime="2025-09-01">1 сентября 2025</time>
-                    </header>
-                    <p>HTML5 добавил множество полезных семантических тегов, которые упрощают разработку сайтов.</p>
-                </article>
-            </div>
-        </section>
-    </main>
+<section class="tickets" id="tickets">
+  <h2>Купить билет</h2>
+  <p>Взрослый — 1500₽</p>
+  <p>Детский — 800₽</p>
+  <a class="ticket-btn" href="#">Оплатить</a>
+</section>
 
-    <!-- КОНТАКТЫ -->
-    <footer id="contacts">
-        <div class="container">
-            <h2>Контакты</h2>
-            <address>
-                Email: <a href="mailto:ivan.dev@example.com">ivan.dev@example.com</a><br>
-                Телефон: <a href="tel:+79001234567">+7 (900) 123-45-67</a>
-            </address>
-            <p>&copy; 2025 Иван Разработчик</p>
-        </div>
-    </footer>
+<footer class="footer">
+  © 2025 ZooLife. Все права защищены.
+</footer>
+
 </body>
 </html>
